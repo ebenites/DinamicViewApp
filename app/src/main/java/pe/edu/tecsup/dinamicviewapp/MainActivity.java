@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     public void agregarFila1(View v) {
         RelativeLayout relativeLayout = new RelativeLayout(this);
         relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        relativeLayout.setPadding(dipToPixel(16), dipToPixel(16), dipToPixel(16), dipToPixel(16));
 
         EditText editText = new EditText(this);
         editText.setId(View.generateViewId());
@@ -57,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void agregarFila2(View v) {
         View view = LayoutInflater.from(this).inflate(R.layout.item_practica, list1, false);
+
+        TextView textView = view.findViewById(R.id.title_text);
+        // TODO...
 
         list1.addView(view);
     }
